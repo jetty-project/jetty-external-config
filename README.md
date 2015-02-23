@@ -55,7 +55,7 @@ From here you can test for properties in the servlet via tooling like `wget` or 
 Example:
 
 ```
-[user]$ curl http://localhost:9090/props/props
+$ curl http://localhost:9090/props/props
 
 [java.runtime.name] = Java(TM) SE Runtime Environment
 [sun.boot.library.path] = /home/joakim/java/jvm/jdk-7u75-x64/jre/lib/amd64
@@ -75,12 +75,14 @@ Example:
 You can even request a specific property ..
 
 ```
-[user]$ curl http://localhost:9090/props/props/user.timezone
+$ curl http://localhost:9090/props/props/user.timezone
 
 [user.timezone] = America/Phoenix
 ```
 
-Lets shutdown the server and re-run it with a system property of our choice.
+Lets stop the server and run it with a system property of our choice.
+
+Notice the `-Dfoo=bar` ?
 
 ```
 [base-command-line]$ java -Dfoo=bar -jar /path/to/jetty-distribution-9.2.7.v20150116/start.jar
@@ -96,7 +98,7 @@ Lets shutdown the server and re-run it with a system property of our choice.
 and look for it via curl ...
 
 ```
-[user]$ curl http://localhost:9090/props/props/foo
+$ curl http://localhost:9090/props/props/foo
 
 [foo] = bar
 ```
