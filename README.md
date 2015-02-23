@@ -26,7 +26,7 @@ This is a simple war file with a single HttpServlet and a WEB-INF/web.xml
    572 Mon Feb 23 08:45:22 MST 2015 WEB-INF/web.xml
 ```
 
-See [PropsServlet.java](blob/master/src/main/java/org/eclipse/demo/PropsServlet.java) for details of behavior.
+See [PropsServlet.java](src/main/java/org/eclipse/demo/PropsServlet.java) for details of behavior.
 
 Just compile the top level and the war file will be built and placed in all of the demo jetty.base locations for this project.
 
